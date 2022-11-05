@@ -1,0 +1,87 @@
+header {
+    background-color: $bg-gray;
+    min-height: 350px;
+    text-align: center;
+    padding: 2em 0;
+
+    @include mQ(860px) {
+    min-height: 450px;
+    }
+
+    .logo {
+    letter-spacing: 0.5em;
+    text-transform: uppercase;
+    font-size: 1.2rem;
+    color: $black;
+    margin-bottom: 2em;
+    display: inline-block;
+    }
+
+    .hero-content {
+    .hero-flex {
+        @include mQ(860px) {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        }
+
+        > div {
+        @extend %flex;
+        justify-content: center;
+        margin-bottom: 10px;
+
+        @include mQ(860px) {
+            justify-content: flex-start;
+            margin-bottom: 0;
+        }
+
+        span {
+            color: $text-gray;
+            width: 26px;
+            height: 26px;
+            border: 1px solid;
+            border-radius: 50%;
+            @extend %flex;
+            justify-content: center;
+            margin-right: 10px;
+        }
+
+        a {
+            color: $text-gray;
+        }
+        }
+
+        .arrow-left {
+        width: 15px;
+        color: $text-gray;
+        }
+        button {
+        font-size: 14px;
+        background: $white;
+        border: none;
+        padding: 15px 50px;
+        cursor: pointer;
+        box-shadow: $box-shadow;
+        font-weight: 600;
+        transition: 0.3s ease-in;
+        border-radius: $border-radius;
+        display: none;
+        @include mQ(860px) {
+            display: inline-block;
+        }
+        &:hover {
+            box-shadow: $box-shadow-hover;
+        }
+        }
+    }
+    h1 {
+        font-size: clamp(2.5rem, 2.2097rem + 1.2903vw, 3.5rem);
+        margin-bottom: 15px;
+    }
+        p {
+        max-width: 360px;
+        margin: 0 auto;
+        color: $text-gray;
+    }
+    }
+  }

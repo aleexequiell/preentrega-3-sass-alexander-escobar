@@ -1,0 +1,147 @@
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+@import url(https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css);
+
+$icon-list: (
+    twitter "\f099" #32b9e7,
+    facebook "\f09a" #4b70ab,
+    linkedin "\f0e1" #0087be,
+    instagram "\f16d" #6291b2,
+    github "\f113" #333333,
+);
+
+@each $icon, $unicode, $icon-background in $icon-list {
+    .icon--#{$icon} {
+        &::before {
+            content: $unicode;
+        }
+    }
+    .social__icon--#{$icon} {
+      background-color: $icon-background;
+        &:hover {
+          background-color: mix(black, $icon-background, 15%);
+        }
+    }
+}
+.social__item {
+    display: inline-block;
+    margin-right: 0.1em;
+}
+.icon {
+	font-family: 'FontAwesome';
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+[class^="icon--"] {
+	@extend .icon;
+}
+.social__icon {
+  font-size: 1.4em;
+  color: white;
+  text-decoration: none;
+  border-radius:100%;
+  width: 2.2em;
+  height: 2.2em;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+[class^="social__icon"] {
+	@extend .social__icon;
+}
+.social__container {
+  padding: 1em;
+  font-size: 1.5em;
+}
+
+div{
+  padding: 0px 20px 0px 0px;
+  
+}
+
+//quien soy
+
+$ancho: 720px;
+$step: 16px;
+$view: customer;
+$lista-colores: whitesmoke, black, brown, beige;
+
+@mixin display-flex($tipo, $direction, $justify, $align, $wrap) {
+    display: $tipo;
+    flex-direction: $direction;
+    justify-content: $justify;
+    align-content: $align;
+    flex-wrap: $wrap;
+}
+
+p {
+    font-size: $step;
+}
+
+.cards {
+    @include display-flex(flex, row, center, center, wrap);
+    &__card {
+        width: $step * 15;
+        height: $step * 10;
+        margin: $step;
+        background-color: beige;
+        border-radius: $step;
+    }
+}
+
+@if $view == owner {
+    @media only screen  {
+        .cards {
+            display: flex;
+            flex-wrap: wrap;
+            &__card {
+                background-color: whitesmoke;
+            }
+        }
+    }
+} @else if $view == customer {
+    @media only screen and (min-width: $ancho) {
+        .cards {
+            display: flex;
+            flex-wrap: wrap;
+            &__card {
+                background-color: tan;
+            }
+        }
+    }
+} @else {
+    p {
+        font-size: $step * 1.15;
+    }
+}
+
+@for $i from 1 through 12 {
+    .col-#{$i} {
+        width: 8.334% * $i;
+    }
+    @media only screen and (min-width: $ancho) {
+        .col-md-#{$i} {
+            width: 8.334% * $i;
+        }
+    }
+}
+
+@each $color in $lista-colores {
+    .theme-#{$color} {
+        @if $color == black {
+            color: whitesmoke;
+        } @else {
+            color: black;
+        }
+        background-color: $color;
+    }
+}

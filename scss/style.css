@@ -1,0 +1,494 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap");
+@import url(https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css);
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  color: BLACK;
+  font-family: "Inter", sans-serif;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  min-height: 100vh;
+}
+
+a {
+  text-decoration: none;
+}
+
+.container {
+  width: min(100% - 2em, 1180px);
+  margin: 0 auto;
+  padding: 15px;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+p {
+  color: BLACK;
+  line-height: 1.6;
+}
+
+.chicle {
+  font-family: Arial-;
+  font-size: 40px;
+  text-align: center;
+  margin: 30px;
+  padding: 0px;
+}
+
+.chicle:hover {
+  -webkit-animation: 2s chicle 1;
+          animation: 2s chicle 1;
+}
+
+@-webkit-keyframes chicle {
+  30% {
+    transform: scaleX(1.5) scaleY(0.7);
+  }
+  40% {
+    transform: scaleX(0.7) scaleY(1.2);
+  }
+  60% {
+    transform: scaleX(1.1) scaleY(0.8);
+  }
+}
+
+@keyframes chicle {
+  30% {
+    transform: scaleX(1.5) scaleY(0.7);
+  }
+  40% {
+    transform: scaleX(0.7) scaleY(1.2);
+  }
+  60% {
+    transform: scaleX(1.1) scaleY(0.8);
+  }
+}
+main .card .card-footer div ul li, main .card .card-footer div ul, main .card .card-footer div, main .card .card-footer, header .hero-content .hero-flex > div span, header .hero-content .hero-flex > div {
+  display: flex;
+  align-items: center;
+}
+
+header {
+  background-color: tan;
+  min-height: 350px;
+  text-align: center;
+  padding: 2em 0;
+}
+@media screen and (min-width: 860px) {
+  header {
+    min-height: 450px;
+  }
+}
+header .logo {
+  letter-spacing: 0.5em;
+  text-transform: uppercase;
+  font-size: 1.2rem;
+  color: BLACK;
+  margin-bottom: 2em;
+  display: inline-block;
+}
+@media screen and (min-width: 860px) {
+  header .hero-content .hero-flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+header .hero-content .hero-flex > div {
+  justify-content: center;
+  margin-bottom: 10px;
+}
+@media screen and (min-width: 860px) {
+  header .hero-content .hero-flex > div {
+    justify-content: flex-start;
+    margin-bottom: 0;
+  }
+}
+header .hero-content .hero-flex > div span {
+  color: BLACK;
+  width: 26px;
+  height: 26px;
+  border: 1px solid;
+  border-radius: 50%;
+  justify-content: center;
+  margin-right: 10px;
+}
+header .hero-content .hero-flex > div a {
+  color: BLACK;
+}
+header .hero-content .hero-flex .arrow-left {
+  width: 15px;
+  color: BLACK;
+}
+header .hero-content .hero-flex button {
+  font-size: 14px;
+  background: WHITE;
+  border: none;
+  padding: 15px 50px;
+  cursor: pointer;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.12);
+  font-weight: 600;
+  transition: 0.3s ease-in;
+  border-radius: 5px;
+  display: none;
+}
+@media screen and (min-width: 860px) {
+  header .hero-content .hero-flex button {
+    display: inline-block;
+  }
+}
+header .hero-content .hero-flex button:hover {
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+}
+header .hero-content h1 {
+  font-size: clamp(2.5rem, 2.2097rem + 1.2903vw, 3.5rem);
+  margin-bottom: 15px;
+}
+header .hero-content p {
+  max-width: 360px;
+  margin: 0 auto;
+  color: BLACK;
+}
+
+main {
+  padding: 0em 0 5em;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  width: min(100% - 2em, 1180px);
+  margin: 0 auto;
+  gap: 30px;
+}
+@media screen and (min-width: 860px) {
+  main {
+    margin-top: -10em;
+  }
+}
+main .card {
+  background: WHITE;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.12);
+  border-radius: 5px;
+  overflow: hidden;
+}
+main .card-top {
+  height: 250px;
+  position: relative;
+}
+main .card-top img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+main .card-body {
+  padding: 20px 25px 40px 20px;
+}
+main .card-body h2 {
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+main .card .card-footer {
+  justify-content: space-between;
+  border-top: 1px solid tan;
+  padding: 18px 25px;
+}
+main .card .card-footer div span {
+  margin-right: 10px;
+  color: BLACK;
+}
+main .card .card-footer div ul {
+  gap: 5px;
+}
+main .card .card-footer div ul li {
+  width: 20px;
+  height: 20px;
+  border-radius: 60%;
+  justify-content: center;
+}
+main .card .card-footer a {
+  color: BLACK;
+  font-weight: 600;
+}
+main .card:nth-child(1) .card-footer ul li:nth-of-type(1) {
+  background: tan;
+}
+main .card:nth-child(1) .card-footer ul li:nth-of-type(2) {
+  background: BLACK;
+}
+main .card:nth-child(2) .card-footer ul li:nth-of-type(1) {
+  background: tan;
+}
+main .card:nth-child(2) .card-footer ul li:nth-of-type(2) {
+  background: #40639b;
+}
+main .card:nth-child(3) .card-footer ul li:nth-of-type(1) {
+  background: #e6c7a0;
+}
+main .card:nth-child(3) .card-footer ul li:nth-of-type(2) {
+  background: #b1c5d1;
+}
+
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+.icon--twitter::before {
+  content: "\f099";
+}
+
+.social__icon--twitter {
+  background-color: #32b9e7;
+}
+.social__icon--twitter:hover {
+  background-color: #2b9dc4;
+}
+
+.icon--facebook::before {
+  content: "\f09a";
+}
+
+.social__icon--facebook {
+  background-color: #4b70ab;
+}
+.social__icon--facebook:hover {
+  background-color: #405f91;
+}
+
+.icon--linkedin::before {
+  content: "\f0e1";
+}
+
+.social__icon--linkedin {
+  background-color: #0087be;
+}
+.social__icon--linkedin:hover {
+  background-color: #0073a2;
+}
+
+.icon--instagram::before {
+  content: "\f16d";
+}
+
+.social__icon--instagram {
+  background-color: #6291b2;
+}
+.social__icon--instagram:hover {
+  background-color: #537b97;
+}
+
+.icon--github::before {
+  content: "\f113";
+}
+
+.social__icon--github {
+  background-color: #333333;
+}
+.social__icon--github:hover {
+  background-color: #2b2b2b;
+}
+
+.social__item {
+  display: inline-block;
+  margin-right: 0.1em;
+}
+
+.icon, [class^=icon--] {
+  font-family: "FontAwesome";
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.social__icon, [class^=social__icon] {
+  font-size: 1.4em;
+  color: white;
+  text-decoration: none;
+  border-radius: 100%;
+  width: 2.2em;
+  height: 2.2em;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.social__container {
+  padding: 1em;
+  font-size: 1.5em;
+}
+
+div {
+  padding: 0px 20px 0px 0px;
+}
+
+p {
+  font-size: 16px;
+}
+
+.cards {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-content: center;
+  flex-wrap: wrap;
+}
+.cards__card {
+  width: 240px;
+  height: 160px;
+  margin: 16px;
+  background-color: beige;
+  border-radius: 16px;
+}
+
+@media only screen and (min-width: 720px) {
+  .cards {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .cards__card {
+    background-color: tan;
+  }
+}
+.col-1 {
+  width: 8.334%;
+}
+
+@media only screen and (min-width: 720px) {
+  .col-md-1 {
+    width: 8.334%;
+  }
+}
+.col-2 {
+  width: 16.668%;
+}
+
+@media only screen and (min-width: 720px) {
+  .col-md-2 {
+    width: 16.668%;
+  }
+}
+.col-3 {
+  width: 25.002%;
+}
+
+@media only screen and (min-width: 720px) {
+  .col-md-3 {
+    width: 25.002%;
+  }
+}
+.col-4 {
+  width: 33.336%;
+}
+
+@media only screen and (min-width: 720px) {
+  .col-md-4 {
+    width: 33.336%;
+  }
+}
+.col-5 {
+  width: 41.67%;
+}
+
+@media only screen and (min-width: 720px) {
+  .col-md-5 {
+    width: 41.67%;
+  }
+}
+.col-6 {
+  width: 50.004%;
+}
+
+@media only screen and (min-width: 720px) {
+  .col-md-6 {
+    width: 50.004%;
+  }
+}
+.col-7 {
+  width: 58.338%;
+}
+
+@media only screen and (min-width: 720px) {
+  .col-md-7 {
+    width: 58.338%;
+  }
+}
+.col-8 {
+  width: 66.672%;
+}
+
+@media only screen and (min-width: 720px) {
+  .col-md-8 {
+    width: 66.672%;
+  }
+}
+.col-9 {
+  width: 75.006%;
+}
+
+@media only screen and (min-width: 720px) {
+  .col-md-9 {
+    width: 75.006%;
+  }
+}
+.col-10 {
+  width: 83.34%;
+}
+
+@media only screen and (min-width: 720px) {
+  .col-md-10 {
+    width: 83.34%;
+  }
+}
+.col-11 {
+  width: 91.674%;
+}
+
+@media only screen and (min-width: 720px) {
+  .col-md-11 {
+    width: 91.674%;
+  }
+}
+.col-12 {
+  width: 100.008%;
+}
+
+@media only screen and (min-width: 720px) {
+  .col-md-12 {
+    width: 100.008%;
+  }
+}
+.theme-whitesmoke {
+  color: black;
+  background-color: whitesmoke;
+}
+
+.theme-black {
+  color: whitesmoke;
+  background-color: black;
+}
+
+.theme-brown {
+  color: black;
+  background-color: brown;
+}
+
+.theme-beige {
+  color: black;
+  background-color: beige;
+}
+
+.zonas {
+  background-color: tan;
+}/*# sourceMappingURL=style.css.map */
